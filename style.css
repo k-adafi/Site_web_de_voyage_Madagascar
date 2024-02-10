@@ -1,0 +1,422 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+#container{
+	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.7), #675afe), url("image_kadafi/im1.jpg");
+	background-position: center;
+	background-size: cover;
+	padding: 10px 10%;
+}
+
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+}
+
+header .logo p {
+	font-size: 40px;
+	color: aliceblue;
+	font-weight: bold;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+header .menu {
+	display: flex;
+	list-style: none;
+}
+
+header .menu li {
+	margin: 15px;
+}
+
+header .menu li a {
+	text-decoration: none;
+	text-transform: capitalize;
+	color: aliceblue;
+}
+
+.menu li a:hover{
+	letter-spacing: 1px;
+	box-shadow: 0 0 10px white;
+}
+
+.container-text{
+	height: calc(100vh - 80px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-text h1 {
+	color:aliceblue;
+	font-size: 50px;
+	text-transform: capitalize;
+	font-family:cursive;
+}
+
+.container-text p {
+	color: aliceblue;
+	font-size: 16px;
+	margin: 20px 0 30px 0;
+
+}
+
+.container-text a {
+	color:aliceblue;
+	text-decoration: 0;
+	text-transform: uppercase;
+	padding: 10px 30px;
+	border: 2px solid#ffff;
+	border-radius: 6px;
+	transform: 0,5s;
+}
+
+
+.container-text a:hover{
+	letter-spacing: 1px;
+	box-shadow: 0 0 10px white;
+}
+
+/*Scrolpane*/
+::-webkit-scrollbar{
+	width: 8px;
+	height: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #675afe;
+}
+
+#a-propos{
+	height: 80vh;
+	margin: 0 10%;
+}
+
+.title-section{
+	text-align: center;
+	margin-top: 50px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #675afe;
+	font-size: 25px;
+}
+
+.sub-tittle-section{
+	text-align: center;
+	font-weight: bold;
+	text-transform: capitalize;
+	font-size: 20px;
+}
+
+.description-photo{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+	height: 358px;
+}
+
+.description-photo .desc{
+	width: 60%;
+}
+
+.description-photo .desc h2{
+	text-align: center;
+	margin: 50px 0;
+
+}
+
+
+.list-services{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+}
+
+.service{
+	width: 31%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 25px 0;
+	box-shadow: 0 0 26px rgba(0,0,0,0.0);
+	border-radius: 20px;
+	height: 100%;
+	transition: 0.5s;
+	cursor: pointer;
+	border: 1px solid #000;
+}
+
+
+.service .img{
+	height: 50px;
+	width: 50px;
+	align-items: center;
+	justify-content: center; 
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	align-items: center;
+	text-align: justify;
+	padding: 10px;
+	border: 1px solid #675afe;
+	border-radius: 50%;
+	background-size: 100% 200%;
+	transition: all 3s;
+	color: #675afe;
+}
+
+.service p{
+	margin-top: 25px;
+}
+
+.service:hover{
+	background-color: #675afe;
+}	
+	
+
+.service .img:hover{
+	background-color: #ffff;
+	transition: 0.5s;
+}
+
+.service p:hover{
+	color: #ffff;
+}
+
+.description-photo .ville{
+	width: 30%;
+	border-radius: 20px;
+}
+
+#galerie{
+	height: 115vh;
+	width: 100%;
+} 
+
+.liste-photo{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 50px;
+	padding: 0 10%;
+}
+
+.liste-photo .galerie-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 0.5s;
+
+}
+.liste-photo .galerie-img {
+	width: 30%;
+	border-radius: 10px;
+	position: relative;
+	margin-bottom: 10px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.liste-photo .galerie-img:hover img {
+	transform: scale(1.2);
+}
+
+.show-contry{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	transition: 0.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffff;
+}
+
+.show-contry p{
+	font-weight: bold;
+	font-size: 30px;
+}
+.liste-photo .galerie-img:hover .show-contry{
+	opacity: 1;
+}
+
+#contact{
+	height: 100vh;
+	/* width: 100%; */
+	margin: 0 10%;
+} 
+
+
+.title-contact{
+	text-align: center;
+	margin-top: 190px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #675afe;
+	font-size: 25px;
+}
+
+.sub-tittle-contact{
+	text-align: center;
+	font-weight: bold;
+	text-transform: capitalize;
+	font-size: 20px;
+}
+
+#contact div{
+	display: flex;
+	justify-content:space-between ;
+	align-items: center;
+	width: 100%;
+	height: calc(150vh - 100px);
+}
+
+#contact form{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 40%;
+	transition: 0.5s;
+	padding: 10%;
+	border-radius: 6px;
+	box-shadow: 0 0  50px rgba(0,0,0,0.4);
+}
+
+#contact form:hover{
+	background-color: #675afe;
+}
+
+label{
+	padding: 5px 0;
+
+}
+
+form:hover label{
+	color: #ffff;
+}
+
+textarea, input{
+	padding: 5px;
+	outline: 0;
+	border-radius: 6px;
+	border: 2px solid #675afe;
+}
+
+textarea{
+	margin-bottom: 10px;
+	resize: none;
+}
+
+input[type="submit"]{
+	background-color: #675afe;
+	color: #ffff;
+	transition: 0.5s;
+	border: 2px solid #ffff;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover{
+	border: 2px solid #ffff;
+	letter-spacing: 2px;
+}
+
+.sociale{
+	flex-basis: 400vh;
+	height: 80%;
+}                
+
+
+.sociale ul{
+	list-style: none;
+	margin: 0 25%;
+	
+}
+
+ul li a{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 35px;
+	padding: 0 10%;
+}
+
+ul li a .img1 {
+	margin: 25px;
+	height: 50px;
+	width: 50px;
+	line-height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center ;
+	border: 5px solid #000;
+	border-radius: 100%;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+ul li a .img1:hover{
+	border: 5px solid #675afe;
+	border-radius: 100%;
+	transform: scale(1.2);
+	transition: 0.5s;
+	letter-spacing: 2px;
+}
+
+.contacts{
+	flex-basis: 50%;
+}
+
+.contacts img{
+	height: 430px;
+	border-radius: 20px;
+}
+
+footer{
+	text-align: left;
+	margin-top: 220px;
+	padding: 10px 0;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+/* Responsive */
+@media (max-width:784px) {
+	#container{
+		padding: 5px 20px;
+	}
+
+	header .menu{
+		display: none;
+	}
+
+	header .menu .menu-toolg{
+		border: 2px solid #ffff;
+		height: 50px;
+		width: 50px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 2;
+
+	}
+
+	header .menu .menu-toolg::before{
+		position: absolute;
+	}
+}
+
